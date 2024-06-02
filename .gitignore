@@ -127,3 +127,24 @@ zeromq-*.zip
 core
 
 mybuild
+
+.vscode
+
+.build
+build/**
+
+__pycache__
+
+poetry.lock
+doc/sphinx/_build
+doc/sphinx/source/api
+
+*.dot
+
+ANCHOR.ini
+
+compile_commands.json
+
+.DS_Store
+
+.swiftpm
