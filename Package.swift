@@ -17,6 +17,9 @@ let package = Package(
       name: "ZeroMQ",
       dependencies: [
         .target(name: "zmq"),
+      ],
+      swiftSettings: [
+        .interoperabilityMode(.Cxx)
       ]
     ),
     .target(

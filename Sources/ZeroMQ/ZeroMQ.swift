@@ -25,11 +25,9 @@
  * -------------------------------------------------------------- */
 
 import Foundation
+import zmq
 
 public class ZMQ
 {
-  public static func version() -> String
-  {
-    "4.3.6"
-  }
+  public static let version = "\(ZMQ_VERSION_MAJOR).\(ZMQ_VERSION_MINOR).\(ZMQ_VERSION_PATCH)"
 }
