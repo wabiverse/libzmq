@@ -61,7 +61,6 @@ libunity.a
 
 # /src
 ## Ignore generated files in configuration process
-src/platform.hpp*
 src/libzmq.pc
 
 # /tools
