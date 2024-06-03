@@ -6,7 +6,8 @@ let package = Package(
   products: [
     .library(
       name: "libzmq",
-      targets: ["libzmq"]),
+      targets: ["zmq", "libzmq"]
+    ),
   ],
   dependencies: [
     // Add any dependencies here
@@ -14,6 +15,25 @@ let package = Package(
   targets: [
     .target(
       name: "libzmq",
-      dependencies: [])
+      dependencies: []
+    ),
+    .target(
+      name: "zmq",
+      dependencies: [
+        .target(name: "libsodium"),
+      ],
+      path: ".",
+      sources: ["src"],
+      publicHeadersPath: "include"
+    ),
+    .systemLibrary(
+      name: "libsodium", 
+      pkgConfig: "libsodium",
+      providers: [
+        .apt(["libsodium-dev"]),
+        .yum(["libsodium-devel"]),
+        .brew(["libsodium"]),
+      ]
+    ),
   ]
 )
