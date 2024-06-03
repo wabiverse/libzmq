@@ -32,7 +32,7 @@ let package = Package(
       publicHeadersPath: "include"
     ),
     .systemLibrary(
-      name: "libsodium", 
+      name: "libsodium",
       pkgConfig: "libsodium",
       providers: [
         .apt(["libsodium-dev"]),
