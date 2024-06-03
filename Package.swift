@@ -5,8 +5,8 @@ let package = Package(
   name: "libzmq",
   products: [
     .library(
-      name: "libzmq",
-      targets: ["zmq", "libzmq"]
+      name: "ZeroMQ",
+      targets: ["zmq", "ZeroMQ"]
     ),
   ],
   dependencies: [
@@ -14,8 +14,10 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "libzmq",
-      dependencies: []
+      name: "ZeroMQ",
+      dependencies: [
+        .target(name: "zmq"),
+      ]
     ),
     .target(
       name: "zmq",
